@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    ss-libev:
+        image: teddysun/shadowsocks-libev
+        restart: always
+        ports:
+            - '9000:9000'
+            - '9000:9000/udp'
+        volumes:
+            - ./shadowsocks-libev:/etc/shadowsocks-libev
